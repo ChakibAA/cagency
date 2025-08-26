@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  itemscope
+  itemtype="https://schema.org/Organization">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <title>C Agency — Web Agency | Official Landing Page</title>
+    <meta
+      name="description"
+      content="C Agency builds fast, modern websites and apps. Official contact & verification details included on this page." />
+    <meta
+      property="og:title"
+      content="C Agency — Web Agency" />
+    <meta
+      property="og:description"
+      content="Official landing page with contact, address, and verification details." />
+    <meta
+      property="og:type"
+      content="website" />
+    <meta
+      property="og:url"
+      content="#" />
+    <meta
+      property="og:image"
+      content="avatar.jpg" />
+    <style>
+      :root {
+        --bg: #0b1020;
+        --card: #121a2b;
+        --muted: #9ca3af;
+        --text: #f8fafc;
+        --brand: #7c3aed;
+        --accent: #a78bfa;
+        --ring: rgba(124, 58, 237, 0.35);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial,
+          sans-serif;
+        background: radial-gradient(
+            1100px 700px at 80% -10%,
+            rgba(124, 58, 237, 0.18),
+            transparent 70%
+          ),
+          radial-gradient(
+            900px 600px at 0% 120%,
+            rgba(167, 139, 250, 0.12),
+            transparent 60%
+          ),
+          var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 28px 18px 72px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--brand), var(--accent));
+        box-shadow: 0 10px 30px var(--ring);
+      }
+      .brand h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      .nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 14px;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 24px;
+        margin: 24px 0;
+      }
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      }
+      .kicker {
+        letter-spacing: 0.18em;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      h2 {
+        margin: 0.2rem 0 0.6rem;
+      }
+      p {
+        color: var(--muted);
+      }
+      .cta {
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        text-decoration: none;
+        color: var(--text);
+        background: linear-gradient(135deg, var(--brand), var(--accent));
+      }
+      .btn.ghost {
+        background: transparent;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .tile {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+        padding: 14px;
+        min-height: 120px;
+      }
+      .profile {
+        display: grid;
+        grid-template-columns: 88px 1fr;
+        gap: 14px;
+        align-items: center;
+        margin-top: 8px;
+      }
+      .avatar {
+        width: 88px;
+        height: 88px;
+        border-radius: 16px;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.18);
+      }
+      .id-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 12px;
+        margin-top: 8px;
+      }
+      .id {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px dashed rgba(255, 255, 255, 0.12);
+        padding: 6px 10px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .section {
+        margin-top: 26px;
+      }
+      .list {
+        padding-left: 18px;
+        margin: 0;
+      }
+      .verify ul {
+        margin: 0.2rem 0 0;
+        padding-left: 18px;
+      }
+      footer {
+        margin-top: 36px;
+        border-top: 1px dashed rgba(255, 255, 255, 0.14);
+        padding-top: 16px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 620px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "C Agency",
+        "url": "#",
+        "email": "mailto:dev.chakibaa@gmail.com",
+        "telephone": "+213 560752464",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "01 les castors gr 02",
+          "addressLocality": "Bir Mourad Rais, Alger",
+          "postalCode": "16000",
+          "addressCountry": "Algeria"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Chakib + Ammar Aouchiche",
+          "image": "avatar.jpg"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div
+            class="logo"
+            aria-hidden="true"></div>
+          <div>
+            <h1>C Agency</h1>
+            <div class="kicker">Web • Design • Development</div>
+          </div>
+        </div>
+        <nav
+          class="nav"
+          aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="card">
+          <div class="kicker">Modern Websites, real results</div>
+          <h2>
+            We build fast, conversion‑focused websites for small businesses.
+          </h2>
+          <p>
+            From landing pages to full e‑commerce, we design, develop, and
+            maintain your web presence. Transparent pricing, quick delivery,
+            ongoing care.
+          </p>
+          <div class="cta">
+            <a
+              class="btn"
+              href="#contact"
+              >Get a quote</a
+            >
+          </div>
+          <div
+            class="profile"
+            id="contact-card">
+            <img
+              class="avatar"
+              src="https://media.licdn.com/dms/image/v2/D4E03AQH-dB1-muEnJA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709659993897?e=1759363200&v=beta&t=6ZMH_1QCrWDUMZJBnnKz57heG4p-3Hok6PoJ5nJT-ns"
+              alt="Portrait of Chakib + Ammar Aouchiche" />
+            <div>
+              <strong>Chakib + Ammar Aouchiche</strong><br />
+              <span style="color: var(--muted)"
+                >Founder & Lead Developer — C Agency</span
+              >
+              <div class="id-row">
+                <span class="id"
+                  >Email: <strong>dev.chakibaa@gmail.com</strong></span
+                >
+                <span class="id">Phone: <strong>+213 560752464</strong></span>
+                <span class="id"
+                  >Address:
+                  <strong
+                    >01 les castors gr 02, Bir Mourad Rais, Alger 16000,
+                    Algeria</strong
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside
+          class="card verify"
+          aria-labelledby="verify-title">
+          <h3 id="verify-title">About us</h3>
+          <ul>
+            <li>
+              Representative full name:
+              <strong>Chakib + Ammar Aouchiche</strong>
+            </li>
+            <li>Company name: <strong>C Agency</strong></li>
+            <li>Contact email: <strong>dev.chakibaa@gmail.com</strong></li>
+            <li>Phone number: <strong>+213 560752464</strong></li>
+            <li>
+              Primary address (matches Payoneer profile):
+              <strong
+                >01 les castors gr 02, Bir Mourad Rais, Alger 16000,
+                Algeria</strong
+              >
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <section
+        id="services"
+        class="section">
+        <div class="card">
+          <h3>Services</h3>
+          <div class="grid">
+            <div class="tile">
+              <strong>Web Design</strong>
+              <p>Clean, responsive UI aligned with your brand.</p>
+            </div>
+            <div class="tile">
+              <strong>Mobile Development</strong>
+              <p>Android & IOS App</p>
+            </div>
+            <div class="tile">
+              <strong>Web Development</strong>
+              <p>Fast, SEO‑friendly sites (HTML/JS, WordPress, Shopify).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="section">
+        <div class="card">
+          <h3>Contact</h3>
+          <p>Use any of the methods below.</p>
+          <div class="grid">
+            <a
+              class="tile"
+              href="mailto:dev.chakibaa@gmail.com"
+              >✉️ dev.chakibaa@gmail.com</a
+            >
+            <a
+              class="tile"
+              href="tel:+213560752464"
+              >📞 +213 560752464</a
+            >
+            <div class="tile">
+              📍 01 les castors gr 02, Bir Mourad Rais, Alger 16000, Algeria
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>© <span id="year"></span> C Agency. All rights reserved.</div>
+        <div>
+          For verification inquiries:
+          <a
+            href="mailto:dev.chakibaa@gmail.com"
+            style="color: var(--accent)"
+            >dev.chakibaa@gmail.com</a
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const d = new Date();
+      document.getElementById("year").textContent = d.getFullYear();
+      document.getElementById("last-updated").textContent =
+        d.toLocaleDateString();
+    </script>
+    <!--
+    HOW TO USE:
+    1) Replace avatar.jpg with your actual portrait file (or update the src to an online photo URL).
+    2) Name this file index.html and host it (Vercel/Netlify/GitHub Pages/your hosting).
+    3) Share the live URL with your bank/Payoneer.
+  --></body>
+</html>
